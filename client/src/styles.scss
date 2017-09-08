@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  color: #333;
+}
+
+.container {
+  max-width: 960px;
+}
+
+.logotype {
+  font-size: 2rem;
+}
+
+.tagline {
+  font-size: 1.2rem;
+}
+
+.footer {
+  font-size: 0.8rem;
+}
