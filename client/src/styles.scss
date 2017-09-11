@@ -15,9 +15,31 @@ body {
 }
 
 .tagline {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .footer {
   font-size: 0.8rem;
+}
+
+@media screen and (max-width: 420px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h2, .logotype {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.7rem;
+  }
 }
