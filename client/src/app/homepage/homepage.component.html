@@ -1,0 +1,103 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="logotype m-0 pt-2">Andre Kuzmicheff</h2>
+      <p class="tagline m-0 p-0">I design and build cool web apps</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 pt-2">
+      <img *ngIf="!isBrowser" class="img-fluid" src="./assets/images/placeholder.png" alt="placeholder image">
+      <ngb-carousel *ngIf="isBrowser">
+        <ng-template ngbSlide>
+          <img class="img-fluid" src="./assets/images/placeholder.png" alt="placeholder image">
+          <div class="carousel-caption">
+            <h3>Web design</h3>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <img class="img-fluid" src="./assets/images/placeholder.png" alt="placeholder image">
+          <div class="carousel-caption">
+            <h3>Development</h3>
+          </div>
+        </ng-template>
+        <ng-template ngbSlide>
+          <img class="img-fluid" src="./assets/images/placeholder.png" alt="placeholder image">
+          <div class="carousel-caption">
+            <h3>And caffeine</h3>
+          </div>
+        </ng-template>
+      </ngb-carousel>
+    </div>
+  </div>
+  <div class="row pt-2">
+    <div class="col-md-4">
+      <h2>Profile</h2>
+      <table class="table">
+        <tr class="row">
+          <td class="col-3">Name:</td>
+          <td class="col-9">Andre Kuzmicheff</td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">Title:</td>
+          <td class="col-9">Designer, developer</td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">Location:</td>
+          <td class="col-9">Madison, Wisconsin</td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">Resume:</td>
+          <td class="col-9"><a href="../../assets/files/resume.pdf" target="blank" title="View resume">resume.pdf</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2>Contacts</h2>
+      <table class="table">
+        <tr class="row">
+          <td class="col-3">Email:</td>
+          <td class="col-9"><a href="mailto:kuzmicheff@gmail.com?subject=Message%20to%20Andre%20Kuzmicheff" title="Send email">kuzmicheff@gmail.com</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">LinkedIn:</td>
+          <td class="col-9"><a href="https://linkedin.com/in/kuzmicheff" title="Connect on LinkedIn">linkedin.com/in/kuzmicheff</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">Twitter:</td>
+          <td class="col-9"><a href="https://twitter.com/kuzmicheff" title="Follow on Twitter">twitter.com/kuzmicheff</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">GitHub:</td>
+          <td class="col-9"><a href="https://github.com/kuzmicheff" title="Follow on GitHub">github.com/kuzmicheff</a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="col-md-4">
+      <h2>Projects</h2>
+      <table class="table">
+        <tr class="row">
+          <td class="col-3">2017:</td>
+          <td class="col-9"><a href="http://cleaningbees.com" title="Cleaning Bees">Cleaning Bees, LLC</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">2017:</td>
+          <td class="col-9"><a href="http://devcodecamp.org/the-milwaukee-swap-2" title="The Milwaukee Swap: Phase 2">The Milwaukee Swap: P2</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">2017:</td>
+          <td class="col-9"><a href="http://devcodecamp.org/the-milwaukee-swap" title="The Milwaukee Swap: Phase 1">The Milwaukee Swap: P1</a></td>
+        </tr>
+        <tr class="row">
+          <td class="col-3">2015:</td>
+          <td class="col-9"><a href="https://tcnl.labs.wisc.edu" title="UW–Madison TCNL">UW–Madison TCNL</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row pt-4">
+    <div class="col-12">
+      <p class="footer">&copy;{{ currentYear }} Andre Kuzmicheff</p>
+    </div>
+  </div>
+</div>
