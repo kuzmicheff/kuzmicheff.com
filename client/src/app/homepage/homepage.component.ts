@@ -7,9 +7,12 @@ import { PLATFORM_ID }      from '@angular/core';
 import { isPlatformBrowser, 
          isPlatformServer } from '@angular/common';
 
+import { ViewEncapsulation } from '@angular/core';
+
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
+  encapsulation: ViewEncapsulation.None,
   templateUrl: './homepage.component.html',
   styleUrls: [ './homepage.component.scss' ],
   providers: [ NgbCarouselConfig ]
