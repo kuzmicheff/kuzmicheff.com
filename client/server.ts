@@ -3,9 +3,15 @@ import 'reflect-metadata';
 import { renderModuleFactory } from '@angular/platform-server';
 import { enableProdMode } from '@angular/core';
 
+import * as dotenv from 'dotenv';
 import * as express from 'express';
+import * as http from 'http';
+import * as https from 'https';
 import { join } from 'path';
 import { readFileSync } from 'fs';
+
+// Load app-specific environment variables
+dotenv.config();
 
 // Faster server renders w/ Prod mode (dev mode never needed)
 enableProdMode();
@@ -13,8 +19,13 @@ enableProdMode();
 // Express server
 const app = express();
 
-const PORT = process.env.PORT || 9021;
+const appPort = process.env.appPort || 9021;
 const DIST_FOLDER = join(process.cwd(), 'dist');
+
+const options = {
+  key: readFileSync(process.env.keyPath),
+  cert: readFileSync(process.env.certPath)
+};
 
 // Our index.html we'll use as our template
 const template = readFileSync(join(DIST_FOLDER, 'browser', 'index.html')).toString();
@@ -53,6 +64,10 @@ app.get('*', (req, res) => {
 });
 
 // Start up the Node server
-app.listen(PORT, () => {
-  console.log(`Node Express server listening on http://localhost:${PORT}`);
+// app.listen(PORT, () => {
+//   console.log(`Node Express server listening on http://localhost:${PORT}`);
+// });
+
+https.createServer(options, app).listen(appPort, () => {
+  console.log(`Node Express server listening on https://localhost:${appPort}`);
 });

@@ -1,0 +1,33 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Andre Kuzmicheff's API server",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kuzmicheff/kuzmicheff.com.git"
+  },
+  "keywords": [
+    "data",
+    "api",
+    "server"
+  ],
+  "author": "Andre Kuzmicheff",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kuzmicheff/kuzmicheff.com/issues"
+  },
+  "homepage": "https://github.com/kuzmicheff/kuzmicheff.com#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "method-override": "^2.3.10",
+    "morgan": "^1.9.0"
+  }
+}
